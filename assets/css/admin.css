@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+:root {
+  --tittle:'Montserrat', sans-serif;
+  --tittle-size: 24px;
+  --tittle-weight: 600;
+
+    --text:'Montserrat', sans-serif;
+    --text-size: 14px;
+    --text-weight: 700;
+}
+input:focus {
+    outline: none;
+  }
+body{
+    
+    background: linear-gradient(180deg, #010404 14.68%, rgba(255, 255, 255, 0.45) 150%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+} 
+.header{
+    background-color: black;
+    /* position: absolute; */
+    color: aliceblue;
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+    padding: 20px 50px 0 50px;
+}   
+.login{
+    display: flex;
+    height: 100%;
+}  
+
+.header p {
+    display: inline-block;
+    
+    
+}
+.header-tittle{
+    font-family: var(--tittle);
+    font-size: var(--tittle-size);
+    font-weight: var(--tittle-weight);
+}
+.login, .logout-btn{
+    font-family: var(--text);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+}
+.admin-name{
+    line-height: 32px;
+    margin-right: 70px;
+}
+.logout-btn{
+    width: 150px;
+    height: 32px;
+    border: none;
+    color:white;
+    background: #6A0000;
+    border-radius: 70px;
+}
+.nav{
+    margin-top: 32px;
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0 186px;
+    text-decoration: none;
+}
+.nav-item {
+    display: block;
+    text-align: center;
+    width:250px ;
+    height:36px ;
+    background: rgba(70, 81, 82, 1);
+    border-radius: 28px;
+}
+.nav-item .nav-link{
+    line-height: 2.5;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: var(--text);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+}
+
+.nav-item.clicked {
+    background-color: #00FFE0;
+  }
+
+  .nav-item.clicked a {
+    color: black;
+  }
+
+  button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+  }

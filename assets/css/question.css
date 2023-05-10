@@ -1,0 +1,121 @@
+thead{
+    background: #00FFE0;
+}
+table{
+    border-collapse: collapse; /* ghép các đường viền của các ô kề nhau thành 1 */
+}
+td,th{
+    border: 1px solid black; /* đường viền 1px và màu đen cho các ô */
+    background-color: #D9D9D9;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.question-modal{
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.46);
+    margin: 20px auto 0 auto;
+}
+.question-table-wrap{
+    overflow: auto;
+ max-height: 100%
+}
+.Question-list {
+    font-family: var(--text);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+}
+/* .Question{
+    width: 72%;
+} */
+.question-img{
+    width: 265px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+.btn-wrap{
+    /* background-color: #00FFE0; */
+    display: flex; flex-direction: column; justify-content: space-around;
+    width: 137px;
+    height: 120px;
+}
+.btn-wrap button{
+    height: 41px;
+    width: 82px;
+    border: none;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #000000;
+    font-family: var(--text);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    color: white;
+}
+.btn-wrap button:hover{
+    background-color: #00FFE0;
+    color: rgb(86, 68, 68);
+}
+
+.detail-modal{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 80%;
+    height: 57%;
+    padding: 10px;
+    box-shadow:10px 10px 100px rgba(255, 255, 255, 0.3) ;
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 17px;
+    font-family: var(--text);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    color: white;
+}
+.col-1{
+    display: flexbox;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(251, 82, 9, 0);
+} 
+.col-2{
+    display: flexbox;
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(251, 82, 9);
+} 
+textarea{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+textarea:focus {
+    outline: none;
+  }
+.question-content textarea {
+    
+    width: 100%;
+    height: 104px;
+  }
+.question-answer textarea{
+    width: 100%;
+
+}
+/* .question-img-modal{
+
+} */
+.question-img-modal img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}

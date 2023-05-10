@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="/assets/css/contestants.css" />
+<div class="Contestants-modal">
+  <div class="Contestants-table-wrap">
+    <div class="Contestants-table">
+      <table class="Contestants-list">
+        <thead>
+          <tr>
+            <th class="Registration number">SBD</th>
+            <th class="Full_Name">Họ và tên</th>
+            <th class="Rank">Hạng</th>
+            <th class="DOB">Năm sinh</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>1</td>
+          <td>Phạm Minh Thắng</td>
+          <td>B1</td>
+          <td>2002</td>
+        </tr>
+      </table>
+    </div>
+    <div class="Contestants-table-buttons">
+      <button class="add-Contestants-btn">Thêm học viên</button>
+      <button class="dell-Contestants-btn">Xóa học viên</button>
+    </div>
+  </div>
+  <div class="edit-wrap">
+    <div class="search-wrap">
+      <button class="search-btn">Tìm kiếm</button>
+      <input type="text" class="search-input" />
+    </div>
+    <form class="edit-content-wrap">
+      <div class="edit-content">
+        <div class="edit-content-item">
+          <p class="edit-content-item-tittle">SBD</p>
+          <input type="text" class="edit-content-item-input" />
+        </div>
+        <div class="edit-content-item">
+          <p class="edit-content-item-tittle">Họ và tên</p>
+          <input type="text" class="edit-content-item-input" />
+        </div>
+        <div class="edit-content-item">
+          <p class="edit-content-item-tittle">Hạng</p>
+          <input type="text" class="edit-content-item-input" />
+        </div>
+        <div class="edit-content-item">
+          <p class="edit-content-item-tittle">Năm sinh</p>
+          <input type="text" class="edit-content-item-input" />
+        </div>
+      </div>
+      <div class="Contestants-img">
+        <!-- <img src="img/avt.png" alt="" />
+        <input type="file" id="fileInput" style="display: none" />
+        <button
+          class="file"
+          onclick="document.getElementById('fileInput').click()"
+        >
+          Chọn ảnh
+        </button> -->
+        <input type="file" id="image-input" />
+        <img id="image-preview" src="" alt="Ảnh xem trước" />
+      </div>
+    </form>
+    <div class="edit-btn">
+      <button class="edit-btn-item">Lưu</button>
+      <button class="edit-btn-item">Xóa</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  //chọn ảnh và hiển thị ảnh vùa chọn bằng thẻ img <img id="image-preview" src="" alt="Ảnh xem trước" />
+  const imageInput = document.getElementById("image-input");
+  const imagePreview = document.getElementById("image-preview");
+
+  imageInput.addEventListener("change", () => {
+    const file = imageInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+      imagePreview.setAttribute("src", reader.result);
+    });
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
